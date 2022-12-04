@@ -1,0 +1,260 @@
+/* genral---------------------------------- */
+:root{
+    --mainColor:#EE5556;
+}
+.fs2{
+    font-size: 13px;
+}
+.fs{
+    font-size: 14px;
+}
+/* ***************************start navbar********************************** */
+.navhover:hover{
+color: var(--mainColor) !important;
+}
+.active{
+    color: var(--mainColor) !important;
+}
+/* ***************************end navbar************************************* */
+/* ---------------------------start slider------------------------------------ */
+.slider .carousel-caption{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.slider .carousel-caption h3{
+    font-size: 60px;
+    font-weight: bolder;
+}
+.slider .carousel-control-prev ,.slider .carousel-control-next{
+    top: 40%;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    border: 1px solid white;
+    border-left: none;
+}
+.slider .carousel-control-prev i ,.slider .carousel-control-next i{
+    z-index: 9999;
+    font-size: 16px;
+}
+.slider .carousel-control-next:hover .lay{
+    left: 0;
+}
+.slider .carousel-control-prev:hover .lay{
+    left: 0;
+}
+.slider .carousel-control-next:hover i{
+  color: var(--mainColor);
+}
+.slider .carousel-control-prev:hover i{
+   color: var(--mainColor);
+}
+.slider .carousel-control-next{
+    top: 47%;
+}
+.staticicon{
+    position:fixed;
+    left: 0;
+    top: 20%;
+}
+.lay{
+    transition: all 0.5s;
+    position: absolute;
+    left: -100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+.dotparent{
+    width: 25px;
+    height: 35px;
+    border-radius: 16px;
+    background-color: transparent;
+    left: 50%;
+    position: absolute;
+    bottom: 10%;
+    border: 1px solid white;
+   overflow: hidden;
+}
+.dot{
+    width: 5px;
+    height: 5px;
+    background-color: #EE5556;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+   animation-direction: reverse;
+    animation: animate  2s infinite ;
+}
+@keyframes animate{
+    0%{
+   top: 0;
+    }
+   
+    50%{
+        top: 50%;
+    }
+    100%{
+        top: 100%;
+    }
+}
+/* ---------------------------end slider-------------------------------------- */
+/* start about us */
+.about::after{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 1px;
+    background-color: black;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 1s all;
+}
+.about{
+    z-index: 99;
+}
+.heading:hover .about::after {
+    width: 50px;
+}
+.aboutletter{
+    bottom: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 60px;
+    /* z-index: -1; */
+    color: rgb(236, 236, 236)
+}
+.progress-bar{
+    background-color: var(--mainColor) ;
+}
+.progress{
+   height: 0.2rem;
+   font-size: 0.35rem;
+}
+.client .carousel-indicators [data-bs-target]:nth-child(1){
+    height: 100px;
+    width: 100px;
+    background-image: url("../images/client-1.png");
+    background-position: center center;
+    background-size: cover;
+    border-radius: 50%;
+}
+.client .carousel-indicators [data-bs-target]:nth-child(2){
+    height: 100px;
+    width: 100px;
+    background-image: url("../images/client-2.png");
+    background-position: center center;
+    background-size: cover;
+    border-radius: 50%;
+    
+}
+.client .carousel-indicators [data-bs-target]:nth-child(3){
+    height: 100px;
+    width: 100px;
+    background-image: url("../images/client-3.png");
+    background-position: center center;
+    background-size: cover;
+    border-radius: 50%;
+}
+.client .carousel-indicators [data-bs-target]:nth-child(4){
+    height: 100px;
+    width: 100px;
+    background-image: url("../images/client-4.png");
+    background-position: center center;
+    background-size: cover;
+    border-radius: 50%;
+}
+.client .carousel-indicators [data-bs-target]:nth-child(5){
+    height: 100px;
+    width: 100px;
+    background-image: url("../images/client-5.png");
+    background-position: center center;
+    background-size: cover;
+    border-radius: 50%;
+    
+}
+.client .carousel-indicators{
+    position: unset;
+}
+/* end about us */
+/* start team  */
+button:hover{
+    opacity: 0.8;
+   transform: scale(1.1);
+}
+.layer{
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(238, 85, 86,0.8);
+    display: none;
+}
+.icons{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.image{
+    overflow: hidden;
+}
+.teamcontent:hover .layer{
+    display: block;
+}
+.teamcontent:hover img{
+    transform: scale(1.1);
+}
+.teamcontent:hover h6{
+    color: var(--mainColor);
+}
+img ,h6, .layer{
+    transition: 1s all;
+}
+/* end team */
+/* start service */
+.services{
+    background-color: #FAFAFA;
+}
+.serviceicon{
+    color: var(--mainColor);
+}
+.servicescontent:hover h6{
+    color: var(--mainColor);
+
+}
+/* end service */
+/* --------------------------start contacts--------------------------- */
+.contactsicon{
+    color: var(--mainColor);
+}
+.part{
+    border-color: rgb(238, 238, 238);
+}
+.contacts{
+    background-color: #FAFAFA;
+   
+}
+/* --------------------------end contacts----------------------------- */
+/* --------------------------start map-------------------------------- */
+.map a:hover p{
+    color: var(--mainColor) !important;
+}
+.map button:hover{
+    border-color: var(--mainColor) !important;
+    color: var(--mainColor) !important;
+    background: none !important;
+}
+/* --------------------------end map---------------------------------- */
+/* --------------------------start footer----------------------------- */
+.footericons a:hover i{
+    color: var(--mainColor);
+}
+.footericons i{
+    transition: 1s all;
+}
+/* --------------------------end footer-------------------------------- */
